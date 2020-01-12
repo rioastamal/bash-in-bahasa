@@ -25,7 +25,7 @@ Angka berada diantara ${angka_minimum} dan ${angka_maksimum}. Selamat bermain!"
 
 tulis
 tulis -n '> Masukkan nama kamu: '
-read nama_pengguna
+baca_input nama_pengguna
 
 tulis
 
@@ -43,5 +43,5 @@ lakukan
     percobaan=$(( $percobaan + 1 ))
 selesai
 
-tulis "GAME OVER. Ooops kamu sudah melebihi ${maksimal_percobaan} kali percobaan."
+tulis "GAME OVER. Ooops kamu sudah melakukan ${maksimal_percobaan} kali percobaan."
 keluar 1
