@@ -2,13 +2,25 @@
 
 Project bash-in-bahasa adalah project for fun untuk menterjemahkan beberapa kata kunci dalam Bash shell kedalam Bahasa Indonesia. Sehingga ketika kita berinteraksi dengan shell atau menulis shell script kita dapat menggunakan kata yang ada dalam Bahasa Indonesia.
 
+* [Penggunaan](#penggunaan)
+* [Contoh-contoh](#contoh-contoh)
+* [Kekurangan](#kekurangan)
+* [Kontribusi Bahasa Lain](#kontribusi-bahasa-lain)
+* [Penulis](#penulis)
+* [Lisensi](#lisensi)
+
 ## Penggunaan
 
 Untuk menjalankan cukup impor file bash-in-bahasa.sh dan Bash dalam Bahasa Indonesia siap digunakan.
 
+```
+$ git clone git@github.com:rioastamal/bash-in-bahasa.git
+$ cd bash-in-bahasa
+```
+
 Kita dapat menggunakan perintah source atau `.` titik untuk impor file.
 
-```bash
+```
 $ source bash-in-bahasa.sh
 $ tulis "Halo Dunia"
 Halo Dunia
@@ -92,6 +104,24 @@ selesai
 
 tulis "GAME OVER. Ooops kamu sudah melebihi ${maksimal_percobaan} kali percobaan."
 keluar 1
+```
+
+Cara menjalankannya.
+
+```
+$ bash samples/tebak-angka.sh
+**********************************
+SELAMAT DATANG DI GAME TEBAK ANGKA
+**********************************
+Kamu harus menebak angka yang muncul maksimal 3 kali percobaan.
+Angka berada diantara 1 dan 15. Selamat bermain!
+
+> Masukkan nama kamu: Rio
+
+> #1 Masukkan angka: 3
+> #2 Masukkan angka: 6
+> #3 Masukkan angka: 1
+GAME OVER. Ooops kamu sudah melakukan 3 kali percobaan.
 ```
 
 ## Kekurangan
