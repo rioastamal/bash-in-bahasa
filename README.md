@@ -66,6 +66,7 @@ Kamu dapat melihat beberapa contoh yang sudah dibuat pada direktori `samples/`. 
 shopt -s expand_aliases
 
 # Asumsi anda menjalankan sample script ini dari root direktori bash-in-bahasa
+# $ bash samples/tebak-angka.sh
 . ./bash-in-bahasa.sh
 
 maksimal_percobaan=3
@@ -84,14 +85,14 @@ Angka berada diantara ${angka_minimum} dan ${angka_maksimum}. Selamat bermain!"
 
 tulis
 tulis -n '> Masukkan nama kamu: '
-read nama_pengguna
+baca_input nama_pengguna
 
 tulis
 
 selama (( $percobaan <= $maksimal_percobaan ))
 lakukan
     tulis -n "> #${percobaan} Masukkan angka: "
-    read jawaban_pengguna
+    baca_input jawaban_pengguna
 
     jika [ $jawaban = $jawaban_pengguna ];
     maka
@@ -102,7 +103,7 @@ lakukan
     percobaan=$(( $percobaan + 1 ))
 selesai
 
-tulis "GAME OVER. Ooops kamu sudah melebihi ${maksimal_percobaan} kali percobaan."
+tulis "GAME OVER. Ooops kamu sudah melakukan ${maksimal_percobaan} kali percobaan."
 keluar 1
 ```
 
