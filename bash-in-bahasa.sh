@@ -72,7 +72,8 @@ alias dir_sekarang=pwd
 alias baca=read
 alias baca_input=read
 alias bacasaja=readonly
-alias kembalian=return
+alias kembalikan=return
+alias nilai_balik=return
 alias tetapkan=set
 alias geser_arg=shift
 # shopt
@@ -89,3 +90,43 @@ alias tipe=type
 alias hilangkan_namalain=unalias
 alias jangan_tetapkan=unset
 alias tunggu=wait
+
+kursor_ke_atas()
+{
+    tulis -ne "\033[${1}A"
+}
+
+kursor_ke_bawah()
+{
+    tulis -ne "\033[${1}B"
+}
+
+kursor_ke_kanan()
+{
+    tulis -ne "\033[${1}C"
+}
+
+kursor_ke_kiri()
+{
+    tulis -ne "\033[${1}D"
+}
+
+bersihkan_layar()
+{
+    tulis -ne ""
+}
+
+bersihkan_baris()
+{
+    tulis -ne "\033[K"
+}
+
+tulis_bersih()
+{
+    tulis -ne "${1}\033[K"
+}
+
+letakkan_kursor()
+{
+    tulis -ne "\033[${1};${2}H"
+}
